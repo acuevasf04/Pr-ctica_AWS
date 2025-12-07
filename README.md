@@ -24,6 +24,16 @@ Para crear la VPC se primero se tiene que seleccionar el botón de ```Crear VPC`
 
 <img width="1851" height="496" alt="imagen" src="https://github.com/user-attachments/assets/1b80fcde-a5aa-4fc8-b0a5-3e417caa0e89" />
 
-Una vez seleccionado, entramos a la configuración del VPC y se configura el tipo de red que queremos implementar. En mi caso voy a poner una red con una máscara /24 por que no voy a usar muchos dispositivos dentro de la red.
+Teniendo en cuenta la estructura que se va a montar, se crearán 3 subredes distintas, una subred para la salida a internet, y las otras dos van a servir para alojar los servidores web, NFS y la base de datos, que en este caso usaré MariaDB. 
 
-<img width="1856" height="806" alt="imagen" src="https://github.com/user-attachments/assets/519ca796-6748-4949-92b0-b055e3bd0f42" />
+<img width="1857" height="861" alt="imagen" src="https://github.com/user-attachments/assets/41dc4fa3-3047-47a9-a3de-c5b86287bea8" />
+
+Una vez creada la VPC, hay que crear las subredes, para asignarlas más tarde a las instancias que se crearán más adelante. Para comprobar que las subredes se han creado correctamente, 
+
+<img width="1441" height="642" alt="imagen" src="https://github.com/user-attachments/assets/c5603e0a-94ff-46ca-92de-74c6cce16ab4" />
+
+Ahora, en el menú de la izquierda hay que darle a la puerta de enlace para dar salida a internet. Se tiene que dar en el botón de nuevo gateway de Internet y a partir de ahí configurar la salida.
+
+<img width="1838" height="655" alt="imagen" src="https://github.com/user-attachments/assets/08c24c12-5a09-4ca8-b4cf-89e1d9253827" />
+
+Una vez creada el gateway a internet hay que conectarlo a una VPC seleccionando en acciones y 
